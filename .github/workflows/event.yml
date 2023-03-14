@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - env: 
-          EVENT_CONTENT: ${{ github.event }}
+          EVENT_CONTENT: ${{ toJSON(github.event) }}
         run: |
-          echo "$EVENT_CONTENT"
+          echo $EVENT_CONTENT
 
