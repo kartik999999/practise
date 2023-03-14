@@ -1,9 +1,9 @@
 name: kartik workflow
 
 on: 
-  # pull_request:
-  #   types:
-  #     - labeled
+  pull_request:
+    branches:
+      - dev
 
   push:
     # branches:
