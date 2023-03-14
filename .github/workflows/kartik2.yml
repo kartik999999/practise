@@ -3,7 +3,7 @@ name: kartik workflow
 on: 
   workflow_run:
     workflows: [kartik]
-    branches:
+    branches-ignore:
       - main
   
 jobs:
