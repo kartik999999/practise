@@ -1,0 +1,24 @@
+name: Manual Input Workflow
+
+on: 
+  workflow_dispatch:
+    inputs:
+      userInput1:
+        description: 'Take Input 1'
+        type: string  
+        required: true
+        default: 'Enter the Input'
+      userInput2:
+        description: 'Take Input 2'
+        type: string 
+        required: true  
+        default: 'Enter the Input'
+
+jobs:
+  print_Input:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Print Input 1
+        run: echo "Input 1 is ${{ inputs.userInput1 }}"
+      - name: Print Input 2
+        run: echo "Input 1 is ${{ inputs.userInput2 }}"

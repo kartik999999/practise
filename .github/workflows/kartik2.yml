@@ -1,10 +1,13 @@
 name: kartik workflow
 
 on: 
-  workflow_run:
-    workflows: [kartik]
-    branches-ignore:
-      - dev
+  # workflow_run:
+  #   workflows: [kartik]
+  #   branches-ignore:
+  #     - dev
+  push:
+    branches:
+      - main4
   
 jobs:
 
