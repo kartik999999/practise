@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - main
+      - dev
     # branches-ignore:
     #   - dev
     #   # - dev
