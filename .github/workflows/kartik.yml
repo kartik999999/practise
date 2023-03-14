@@ -31,7 +31,7 @@ jobs:
 
   my_workflow:
     runs-on: ubuntu-latest
-    name: print hello
+    name: print hello 2
     steps:
       - name: print hello
         run: echo "Hello"
