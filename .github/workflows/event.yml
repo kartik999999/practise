@@ -6,12 +6,13 @@ on:
       - main
 
 jobs:
-
+  
   print_workflows:
     runs-on: ubuntu-latest
+    env: 
+      EVENT_CONTENT: ${{ toJSON(github.event) }}
     steps:
-      - env: 
-          EVENT_CONTENT: ${{ toJSON(github.event) }}
-        run: |
+      
+      - run: |
           echo $EVENT_CONTENT
 
