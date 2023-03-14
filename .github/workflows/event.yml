@@ -1,0 +1,17 @@
+name: Event Print
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+
+  print_workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - env: 
+          EVENT_CONTENT: ${{ github.event }}
+        run: |
+          echo "$EVENT_CONTENT"
+
