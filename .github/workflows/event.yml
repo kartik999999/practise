@@ -14,5 +14,5 @@ jobs:
     steps:
       
       - run: |
-          echo $EVENT_CONTENT
+          echo ${{ env.EVENT_CONTENT }}
 
