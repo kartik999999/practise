@@ -1,0 +1,16 @@
+name: kartik workflow
+
+on: 
+  workflow_run:
+    workflows: [kartik]
+    branches:
+      - main
+  
+jobs:
+
+  my_workflow:
+    runs-on: ubuntu-latest
+    name: print hello
+    steps:
+      - name: print hello
+        run: echo "Hello"

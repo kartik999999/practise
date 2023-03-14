@@ -1,16 +1,16 @@
 name: kartik workflow
 
 on: 
-  pull_request:
-    branches:
-      - dev
+  # pull_request:
+  #   branches:
+  #     - dev
 
   push:
-    # branches:
-    #   - main
-    branches-ignore:
-      - dev
-      # - dev
+    branches:
+      - main
+    # branches-ignore:
+    #   - dev
+    #   # - dev
   
 jobs:
 
