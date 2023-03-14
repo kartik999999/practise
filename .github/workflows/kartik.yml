@@ -6,8 +6,10 @@ on:
   #     - labeled
 
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
+    branches-ignore:
+      - dev
       # - dev
   
 jobs:
@@ -17,7 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Save Output
     steps:
-      - shell: bash
+      - name: operations
+        shell: bash
         run: |
           expr 1 + 1 > output.log
       - name: upload output file
@@ -26,9 +29,9 @@ jobs:
           name: output-log-file
           path: output.log
 
-
   my_workflow:
     runs-on: ubuntu-latest
+    name: print hello
     steps:
       - name: print hello
         run: echo "Hello"
